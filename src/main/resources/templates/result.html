@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Workshop12 Result Page</title>
+</head>
+<body>
+    <h1>Your list of <span data-th-text="${numberRandomNum}"></span></h1>
+    <ul data-th-each="numberImg : ${randNumResult}">
+
+    </ul>
+    <h1>Your list of <span data-th-text="${numberRandomNum}"></span> random numbers</h1>
+    <ul data-th-each="numberImg : ${randNumResult}">
+        <li data-th-text="${numberImg}"></li>
+        <img data-th-src="@{${'/images/numbers/' + numberImg}}" width="300" height="300"/>
+    </ul>
+</body>
+</html>
